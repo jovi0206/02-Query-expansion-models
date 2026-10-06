@@ -1,0 +1,172 @@
+{
+  "project": "NCKU Biomedical Information Retrieval Project 2",
+  "official_corpus": "GLP-1 PubMed-selected -> direct PMC JATS (pubmed_pmc)",
+  "analysis_scope": "main abstract body only; section headings excluded",
+  "idf_convention": "log10(N / DF), no smoothing",
+  "official_raw_directory": "D:\\OneDrive - TSY\\桌面\\Project2\\data\\glp1_pubmed_jats_v2\\valid_1200",
+  "corpus_selection_rule": "first 1000 documents accepted by the official Project 2 loader from the validated 1200-document reserve pool, preserving PubMed relevance order",
+  "prepared_runtime": "D:\\OneDrive - TSY\\桌面\\Project2\\02-query expansion models\\artifacts\\project2_runtime.pkl.gz",
+  "documents": 1000,
+  "corpus_sha256": "7c3739fab90f225e628f47fe737596bd6f2059e35300005801267c1152ae4756",
+  "raw_jats_dir": "D:\\OneDrive - TSY\\桌面\\Project2\\data\\glp1_pubmed_jats_v2\\valid_1200",
+  "prepared_corpus": "D:\\OneDrive - TSY\\桌面\\Project2\\02-query expansion models\\prepared_data\\glp1_1000_abstracts.jsonl.gz",
+  "prepared_analysis": "D:\\OneDrive - TSY\\桌面\\Project2\\02-query expansion models\\artifacts\\project2_analysis.json.gz",
+  "word2vec_model": "D:\\OneDrive - TSY\\桌面\\Project2\\02-query expansion models\\artifacts\\glp1_word2vec.model",
+  "optional_domain_status": "not_run",
+  "timings_seconds": {
+    "build": 7.251735500001814,
+    "required_analysis": 3.235168099985458,
+    "word2vec": 7.958736500004306,
+    "total": 26.963130000047386
+  },
+  "index_summary": {
+    "documents": 1000,
+    "unique_terms": 14698,
+    "total_terms": 200530,
+    "average_terms_per_document": 200.53,
+    "errors": 0
+  },
+  "dataset_audit": {
+    "source_directory": "D:\\OneDrive - TSY\\桌面\\Project2\\data\\glp1_pubmed_jats_v2\\valid_1200",
+    "target_documents": 1000,
+    "xml_files_found": 1200,
+    "parsed_files": 1003,
+    "accepted_documents": 1000,
+    "missing_pmid": [],
+    "missing_abstract": [
+      "PMC11781064.xml",
+      "PMC11381484.xml",
+      "PMC10474181.xml"
+    ],
+    "non_english": [],
+    "duplicate_pmids": [],
+    "parse_errors": [],
+    "excluded_abstract_type_counts": {},
+    "abstract_policy": "Prefer untyped main <abstract>; exclude precis/highlights/graphical/supplementary-style abstracts; analyze paragraph body text only.",
+    "analysis_scope": "main abstract body only; section headings excluded",
+    "unique_pmids": 1000,
+    "complete_target": true,
+    "source_collection_audit": {
+      "generated_at_utc": "2026-10-02T05:44:35.479931+00:00",
+      "query": "(\"GLP-1\"[All Fields] OR \"glucagon-like peptide-1\"[All Fields])",
+      "mapping_rule": "direct PubMed -> PMC only; linkname=pubmed_pmc",
+      "pubmed_total_matches": 35645,
+      "pubmed_candidates_checked": 3700,
+      "valid_pool_documents": 1200,
+      "formal_documents": 1000,
+      "formal_unique_pmids": 1000,
+      "rejection_counts": {
+        "no_direct_pmc_mapping": 2402,
+        "missing_main_abstract": 87,
+        "non_english": 2
+      },
+      "representation_document_frequency": {
+        "glp-1_ascii_exact": 864,
+        "glucagon-like_peptide-1_ascii": 566,
+        "glp-1r_ascii_exact": 164,
+        "glucagon-like_peptide_1_ascii": 149,
+        "glp‐1_u2010_exact": 86,
+        "glp1_exact": 23,
+        "glp1r_exact": 28,
+        "glp‐1r_u2010_exact": 11,
+        "glucagon_like_peptide_1_spaces": 7,
+        "glp_1_space_exact": 2,
+        "glp−1_u2212_exact": 1,
+        "glp–1_u2013_exact": 1
+      },
+      "any_requested_or_extra_form_unique_documents": 983
+    },
+    "source_valid_pool_documents": 1200,
+    "source_formal_documents": 1000,
+    "source_glp1_any_form_documents": 983,
+    "source_mapping_rule": "direct PubMed -> PMC only; linkname=pubmed_pmc",
+    "system_glp1_representation_audit": {
+      "scope": "exact Project 2 accepted experiment corpus; raw main abstract only",
+      "total_documents": 1000,
+      "document_frequency": {
+        "glp-1_ascii_exact": 849,
+        "glp‐1_u2010_exact": 82,
+        "glp‑1_u2011_exact": 0,
+        "glp–1_u2013_exact": 1,
+        "glp_1_space_exact": 2,
+        "glp-1r_ascii_exact": 160,
+        "glucagon-like_peptide-1_ascii": 550,
+        "glucagon-like_peptide_1_ascii": 150,
+        "glp−1_u2212_exact": 1,
+        "glp—1_u2014_exact": 0,
+        "glp‐1r_u2010_exact": 11,
+        "glp1_exact": 22,
+        "glp1r_exact": 27,
+        "glucagon_like_peptide_1_spaces": 6
+      },
+      "any_form_unique_documents": 967,
+      "any_form_coverage": 0.967,
+      "documents_without_audited_form": 33,
+      "unmatched_preview": [
+        {
+          "pmid": "26271795",
+          "pmcid": "PMC4575308",
+          "title": "Comparison Review of Short-Acting and Long-Acting Glucagon-like Peptide-1 Receptor Agonists",
+          "abstract_preview": "The online version of this article (doi:10.1007/s13300-015-0127-x) contains supplementary material, which is available to authorized users."
+        },
+        {
+          "pmid": "35651477",
+          "pmcid": "PMC9149770",
+          "title": "Designing a Dual GLP-1R/GIPR Agonist from Tirzepatide: Comparing Residues Between Tirzepatide, GLP-1, and GIP",
+          "abstract_preview": "Improving type 2 diabetes using incretin analogues is becoming increasingly plausible. Currently, tirzepatide is the most promising listed incretin analogue. Here, I briefly explain the evolution of drugs of this kind, analyze the residue discrepancies between tirzepatide and endogenous incretins, summarize some existing strategies for prolonging half-life, and present suggestions for future research, mainly involving biased functions. This review aims to present some useful information for desi"
+        },
+        {
+          "pmid": "42224006",
+          "pmcid": "PMC13224918",
+          "title": "Affordable GLP-1? When Digital Platforms Meet Policy Reform",
+          "abstract_preview": "Recent shifts in US policy and digital platforms are making obesity medications more affordable. In this News and Perspectives article, JMIR Correspondent Xiangming Jenny Zhan reports on this emerging access model and its potential implications."
+        },
+        {
+          "pmid": "40108209",
+          "pmcid": "PMC11923236",
+          "title": "Insights into GLP-1 and insulin secretion mechanisms in pasireotide-induced hyperglycemia highlight effectiveness of Gs-targeting diabetes treatment",
+          "abstract_preview": "The online version contains supplementary material available at 10.1038/s41598-025-90896-2."
+        },
+        {
+          "pmid": "20376212",
+          "pmcid": "PMC2846464",
+          "title": "Gliptins: A New Class of Oral Antidiabetic Agents",
+          "abstract_preview": "India has the largest population of patients with type 2 diabetes mellitus. The conventional agents used to treat type 2 diabetes frequently exhibit reduced efficacy over time leading to inadequate glycaemic control and are also associated with adverse effects. Hence, there is a need for alternative therapies that can overcome the limitations associated with conventional antidiabetic agents. This review focuses on Gliptins, which have become a research area of intense focus and present an altern"
+        },
+        {
+          "pmid": "41165218",
+          "pmcid": "PMC12694975",
+          "title": "Incretins (GLP-1 Receptor Agonists) and Polycystic Ovaries",
+          "abstract_preview": "Polycystic ovary syndrome (PCOS) is a widespread condition affecting women of reproductive age. A new class of medications called incretins (GLP1RAs) provides new opportunities for reducing obesity, hyperandrogenism, and insulin resistance in these patients. Promising results have been achieved, including metabolic improvements and benefits in women with PCOS using different GLP1RAs."
+        },
+        {
+          "pmid": "28733905",
+          "pmcid": "PMC6448809",
+          "title": "GLP-1/glucagon receptor co-agonism for treatment of obesity",
+          "abstract_preview": "The online version of this article (doi:10.1007/s00125-017-4354-8) contains a slide of the figure for download, which is available to authorised users."
+        },
+        {
+          "pmid": "39930071",
+          "pmcid": "PMC11811119",
+          "title": "Glucagon-like peptide-1 receptor agonists improve metabolic dysfunction-associated steatotic liver disease outcomes",
+          "abstract_preview": "The online version contains supplementary material available at 10.1038/s41598-025-89408-z."
+        },
+        {
+          "pmid": "38971429",
+          "pmcid": "PMC11413617",
+          "title": "Gut hormone stimulation as a therapeutic approach in oral peptide delivery",
+          "abstract_preview": "In this contribution to the Orations - New Horizons of the Journal of Controlled Release, I discuss the research that we have conducted on gut hormone stimulation as a therapeutic strategy in oral peptide delivery. One of the greatest challenges in oral drug delivery involves the development of new drug delivery systems that enable the absorption of therapeutic peptides into the systemic circulation at therapeutically relevant concentrations. This scenario is especially challenging in the treatm"
+        },
+        {
+          "pmid": "40787019",
+          "pmcid": "PMC12331298",
+          "title": "Injections vs. Scalpels: Where Do Surgery and GLP-1’s Align in Modern Obesity treatment?",
+          "abstract_preview": "Recent advancements in pharmacologic treatment of obesity and metabolic disease with nutrient-stimulated hormones (NuSH), particularly Semaglutide and Tirzepatide, have been revolutionary, showing weight reduction results comparable to some surgical options. This is especially promising as, despite the proven efficacy and safety of metabolic/bariatric surgery (MBS), its utilization has remained quite limited. This review article discusses the current literature on the comparative effectiveness o"
+        }
+      ]
+    },
+    "system_glp1_any_form_documents": 967,
+    "system_glp1_total_documents": 1000,
+    "system_glp1_any_form_coverage": 0.967
+  }
+}

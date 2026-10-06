@@ -1,0 +1,23 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Project 2 development / superseded UI files
+src/m09_app.py
+src/m09_app_v2.py
+src/SYSTEM_UPDATE_README.txt
+
+# Local temporary files
+*.tmp
+*.log
