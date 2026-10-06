@@ -2014,16 +2014,14 @@ def _render_regional_r2_grouped_bar(app_state):
             x=0.0,
         ),
         xaxis=dict(
-            title="Preprocessing Condition",
+            title=dict(text="Preprocessing Condition", font=dict(size=15)),
             tickfont=dict(size=15),
-            titlefont=dict(size=15),
         ),
         yaxis=dict(
-            title="R²",
+            title=dict(text="R²", font=dict(size=15)),
             range=[0, 1.06],
             tickformat=".2f",
             tickfont=dict(size=13),
-            titlefont=dict(size=15),
             gridcolor="rgba(120,130,120,0.15)",
         ),
     )
